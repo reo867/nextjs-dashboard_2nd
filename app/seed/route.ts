@@ -1,5 +1,6 @@
 import bcrypt from 'bcryptjs';
-import { db } from '@vercel/postgres';
+import postgres from 'postgres';
+// import { postgres } from '@vercel/postgres';
 import { invoices, customers, revenue, users } from '../lib/placeholder-data';
 
 const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
